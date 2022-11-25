@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+<div class="container">
+    <!--Body calculator -->
+    <form name="calculator" class="body-calculator">
+
+        <!--input -->
+        <!--onkeypress='return valid(event) : evento de presionar teclas que solo permite el ingreso de numeros a la calculador-->
+        <input type="textfield" class="input-prn" name="ans" value="" id="input-number" onkeypress='return valid(event)'>
+
+
+        <!-- container btn conversor -->
+            <div class="body-operation-up-conversor">
+                <input type="button" value="Convertir unidades" id="conversor">
+            </div>
+        
+        <!-- container btn operation up -->
+            <div class="body-operations-up">
+                <div class="body-operations-up-1">
+                    <input type="button" value="c" class="btn-ou" id="delall">
+                    <input type="button" value="x" class="btn-ou" onclick="document.calculator.ans.value+='*'">
+                    <input type="button" value="/" class="btn-ou" onclick="document.calculator.ans.value+='/'">
+                </div>
+                <div class="body-operations-up-2">
+                    <input type="button" class="btn-ou-del" id="del">
+                </div>
+            </div>
+        
+        <div class="body-lat">
+        <!--btn numbers-->
+            <div class="body-number">
+                <input type="button" class="btn-n" value="1" onclick="document.calculator.ans.value+='1'">
+                <input type="button" class="btn-n"value="2" onclick="document.calculator.ans.value+='2'">
+                <input type="button" class="btn-n"value="3" onclick="document.calculator.ans.value+='3'">
+                <input type="button" value="4" class="btn-n" onclick="document.calculator.ans.value+='4'">
+                <input type="button" value="5" class="btn-n" onclick="document.calculator.ans.value+='5'">
+                <input type="button" value="6" class="btn-n" onclick="document.calculator.ans.value+='6'">
+                <input type="button" value="7" class="btn-n" onclick="document.calculator.ans.value+='7'">
+                <input type="button" value="8" class="btn-n" onclick="document.calculator.ans.value+='8'">
+                <input type="button" value="9" class="btn-n" onclick="document.calculator.ans.value+='9'">
+                <input type="button" value="P" id="prime" class="btn-n">
+                <input type="button" value="0" class="btn-n" onclick="document.calculator.ans.value+='0'">
+                <input type="button" value="." class="btn-n" onclick="document.calculator.ans.value+='.'">
+            </div>
+        
+        <!-- Container btn operations lat -->
+            <div class="body-operations-lat">
+            <input type="button" value="+" class="btn-n" onclick="document.calculator.ans.value+='+'">
+            <input type="button" value="-" class="btn-n" onclick="document.calculator.ans.value+='-'">
+            <input type="button" value="=" class="btn-n-same" id="same">
+            </div>
+        </div>
+    </div>
+    </form>
+    <!-- Conversor de unidades -->
+    <div class="container-conversor">
+        <form action="#">
+            <label for="lang">Unidad de entrada:</label>
+            <select id="unit-ent" id="lang">
+              <option>Pixel</option>
+              <option>Porcentaje</option>
+              <option>Rem</option>
+            </select>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>¿

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* contenedor principal */
+.container{
+    width: 300px;
+    height: 420px;
+}
+.body-calculator{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+/* Caja de texto */
+input[type=textfield]{
+    width: 100%;
+    height: 20%;
+    text-align: right;
+    font-size: 50px;
+    border-radius: 5px;
+}
+/* Organización de los elementos */
+.body-lat{
+    display: flex;
+    flex-direction: row;
+}
+.body-number{
+    width: 70%;
+}
+.body-operations-lat{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+/* Elementos */
+/* Botones de arriba */
+.body-operations-up{
+    display: flex;
+    justify-content: space-between;
+}
+.body-operations-up-1{
+    width: 70%;
+}
+/* bonton eliminar todo, multiplicar y dividir */
+.body-operations-up-1 > .btn-ou{
+    width: 30%;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border-color: transparent;
+    color: rgb(22, 128, 22);
+    background-color: rgba(22, 128, 22, 0.507);;
+}
+/* Boton de eliminar */
+.body-operations-up-2 > .btn-ou-del{
+    width: 100%;
+    border-radius: 10px;
+    background: url(//img.icons8.com/ios/50/null/clear-symbol--v1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-color: transparent;
+    color: rgb(22, 128, 22);
+    background-color: rgba(22, 128, 22, 0.507);;
+}
+.body-number input{
+    width: 30%;
+    padding: 15px;
+    border-radius: 100%;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(26, 25, 25);
+}
+.body-operations-lat .btn-n{
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 25px;
+    color: rgb(22, 128, 22);
+    background-color: rgba(22, 128, 22, 0.507);;
+}
+/* Boton igual */
+.btn-n-same{ 
+    height: 100%;
+    background-color: rgb(22, 128, 22);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    border-color: transparent;
+}
+
+
