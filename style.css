@@ -2,125 +2,183 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-/* contenedor principal */
-.container{
-    width: 300px;
-    height: 420px;
-}
+/* Cuerpo de la calculadora */
 .body-calculator{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border-radius: 5px;
-    padding: 15px;
+    width: 300px;
+    height: 500px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #221d21;
+    border: black 1px solid;
 }
-/* Caja de texto */
-input[type=textfield]{
-    width: 100%;
+/* input principal */
+.input-prn{
+    margin: 5%;
+    width: 90%;
     height: 20%;
     text-align: right;
-    font-size: 50px;
-    border-radius: 5px;
-    background-color: rgb(56, 55, 55);
-    border-color: transparent;
-    color: white;
-    
+    font-size: 40px;
+    background: #433d3d;
+    color: #e33c08;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 10px;
+    outline: transparent;
 }
-/* Organización de los elementos */
+/* botones up line one */
+.body-operations-up-1{
+    display: flex;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+.conversor-unit{
+    margin-right: 3%;
+    width: 70%;
+    margin-bottom: 2%;
+    padding: 8px;
+    border-radius: 10px;
+    background: #db6744;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;
+}
+.conversor-unit:hover{
+    background-color: #b7aea5;
+    font-weight: bold;
+    color: #221d21;  
+}
+/* botones de parentesis */
+.btnjerarquia{
+    width: 30%;
+    margin-right: 4%;
+}
+.btn-j{
+    padding: 9px 15px 9px 15px;
+    border-radius: 50%;
+    background: #433d3d;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;
+}
+.btn-j:hover{
+    background-color: #b7aea5;
+    font-weight: bold;
+    color: #221d21;
+}
+/* Botones up line two*/
+.body-operations-up-2{
+    display: flex;
+    margin-left: 8px;
+    margin-right: 5%;
+}
+.body-operations-up-2 input{
+    width: 25%;
+    margin: 3%;
+    padding: 15px;
+    border-radius: 100%;
+    background: #433d3d;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;
+}
+.body-operations-up-2-1{
+    width: 70%;
+}
+.body-operations-up-2-2{
+    width: 30%;
+}
+/* Btn del */
+.body-operations-up-2-2 input{
+    width: 100%;
+    margin-left: 8%;
+    padding: 15px;
+    border-radius: 10px;
+    background: #db6744;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;
+}
+.body-operations-up-2 input:hover{
+    background-color: #b7aea5;
+    font-weight: bold;
+    color: #221d21;
+}
+/* btn lat */
 .body-lat{
     display: flex;
-    flex-direction: row;
+    margin-left: 8px;
+    margin-right: 5%;
 }
+/* botones de numeros */
 .body-number{
     width: 70%;
 }
+.body-number input{ 
+    width: 25%;
+    margin: 3%;
+    padding: 15px;
+    border-radius: 100%;
+    background: #433d3d;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;
+}
+.body-number input:hover{
+    background-color: #b7aea5;
+    font-weight: bold;
+    color: #221d21;
+}
+/* operaciones laterales */
 .body-operations-lat{
     width: 30%;
     display: flex;
     flex-direction: column;
 }
-/* Elementos */
-/* Botones de arriba */
-.body-operations-up{
-    display: flex;
-    justify-content: space-between;
-}
-.body-operations-up-1{
-    width: 70%;
-}
-/* bonton eliminar todo, multiplicar y dividir */
-.body-operations-up-1 > .btn-ou{
-    width: 30%;
-    border-radius: 100%;
+.btn-n{
+    width: 100%;
+    margin: 7%;
     padding: 15px;
+    border-radius: 10px;
+    background: #433d3d;
     font-size: 15px;
-    color: white;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;   
+}
+.btn-n:hover{
+    background-color: #b7aea5;
     font-weight: bold;
-    border-color: transparent;
-    color: rgb(22, 128, 22);
-    background-color: rgba(22, 128, 22, 0.507);
-    cursor: pointer;
+    color: #221d21;
 }
-.body-operations-up-1 > .btn-ou:hover{
-    color: white;
-    background-color: rgb(75, 110, 75);
-}
-/* Boton de eliminar */
-.body-operations-up-2 > .btn-ou-del{
-    width: 85px;
-    height: 50px;
-    border-radius: 10px;
-    background: url(//img.icons8.com/ios/50/null/clear-symbol--v1.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 30px;
-    border-color: transparent;
-    color: rgb(22, 128, 22);
-    background-color: rgba(22, 128, 22, 0.507);
-    cursor: pointer;
-}
-.body-operations-up-2 > .btn-ou-del:hover{
-    color: white;
-    background-color: rgb(75, 110, 75);
-}
-.body-number input{
-    width: 30%;
-    padding: 15px;
-    border-radius: 100%;
-    font-size: 15px;
-    color: white;
-    background-color: rgb(26, 25, 25);
-    cursor: pointer;
-}
-.body-number input:hover{
-    color: white;
-    background-color: rgb(63, 60, 60);
-}
-.body-operations-lat .btn-n{
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 25px;
-    color: rgb(22, 128, 22);
-    background-color: rgba(22, 128, 22, 0.507);;
-}
-.body-operations-lat .btn-n:hover{
-    color: white;
-    background-color: rgb(75, 110, 75);    
-}
-/* Boton igual */
-.btn-n-same{ 
+/* boton de igual */
+.btn-n-same{
     height: 100%;
-    background-color: rgb(22, 128, 22);
+    width: 100%;
+    margin: 7%;
     padding: 15px;
     border-radius: 10px;
-    font-size: 25px;
-    color: white;
-    border-color: transparent;
+    background: #db6744;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    border: transparent;
+    cursor: pointer;      
 }
 .btn-n-same:hover{
-    color: white;
-    background-color: rgb(75, 110, 75);    
+    background-color: #f77014;
+    font-weight: bold;
+    color: #221d21;   
 }
-
-

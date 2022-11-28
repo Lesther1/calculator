@@ -15,22 +15,25 @@
         <!--input -->
         <!--onkeypress='return valid(event) : evento de presionar teclas que solo permite el ingreso de numeros a la calculador-->
         <input type="textfield" class="input-prn" name="ans" value="" id="input-number" onkeypress='return valid(event)'>
-
-
-        <!-- container btn conversor -->
-            <div class="body-operation-up-conversor">
-                <input type="button" value="Convertir unidades" id="conversor">
-            </div>
         
         <!-- container btn operation up -->
             <div class="body-operations-up">
                 <div class="body-operations-up-1">
-                    <input type="button" value="c" class="btn-ou" id="delall">
-                    <input type="button" value="x" class="btn-ou" onclick="document.calculator.ans.value+='*'">
-                    <input type="button" value="/" class="btn-ou" onclick="document.calculator.ans.value+='/'">
+                    <div class="btnjerarquia">
+                        <input type="button" value="(" class="btn-j" onclick="document.calculator.ans.value+='('">
+                        <input type="button" value=")" class="btn-j" onclick="document.calculator.ans.value+=')'">
+                    </div>
+                    <input type="button" value="Convertir unidades" class="conversor-unit" id="conversor">
                 </div>
                 <div class="body-operations-up-2">
-                    <input type="button" class="btn-ou-del" id="del">
+                    <div class="body-operations-up-2-1">
+                        <input type="button" value="c" class="btn-up" id="delall">
+                        <input type="button" value="x" class="btn-up" onclick="document.calculator.ans.value+='*'">
+                        <input type="button" value="/" class="btn-up" onclick="document.calculator.ans.value+='/'">
+                    </div>
+                    <div class="body-operations-up-2-2">
+                        <input type="button" class="btn-up-del" value="del" id="del">
+                    </div>
                 </div>
             </div>
         
@@ -40,6 +43,7 @@
                 <input type="button" class="btn-n" value="1" onclick="document.calculator.ans.value+='1'">
                 <input type="button" class="btn-n"value="2" onclick="document.calculator.ans.value+='2'">
                 <input type="button" class="btn-n"value="3" onclick="document.calculator.ans.value+='3'">
+                <br>
                 <input type="button" value="4" class="btn-n" onclick="document.calculator.ans.value+='4'">
                 <input type="button" value="5" class="btn-n" onclick="document.calculator.ans.value+='5'">
                 <input type="button" value="6" class="btn-n" onclick="document.calculator.ans.value+='6'">
@@ -71,7 +75,6 @@
             </select>
         </form>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>¿
+</html>
