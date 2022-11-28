@@ -5,7 +5,7 @@
 
 
 ###### Introducción:
-Proyecto introductorio para el aprendizaje del lenguaje de javascript, y tambien se implementa alguno de los conocimientos adquiridos en html y css para la creacción de una calculadora simple.
+Proyecto introductorio para el aprendizaje del lenguaje de javascript, y tambien se implementa algunos de los conocimientos adquiridos en html y css para la creacción de una calculadora simple.
 
 ###### Funcionalidades:
 >Operaciones basicas con y sin parentesis para jararquia.
