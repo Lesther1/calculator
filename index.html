@@ -23,7 +23,7 @@
                         <input type="button" value="(" class="btn-j" onclick="document.calculator.ans.value+='('">
                         <input type="button" value=")" class="btn-j" onclick="document.calculator.ans.value+=')'">
                     </div>
-                    <input type="button" value="Convertir unidades" class="conversor-unit" id="conversor">
+                    <input type="button" value="Convertir unidades" class="conversor-unit" id="conversor" onclick="ocultarymostrar()">
                 </div>
                 <div class="body-operations-up-2">
                     <div class="body-operations-up-2-1">
@@ -62,19 +62,28 @@
             <input type="button" value="=" class="btn-n-same" id="same">
             </div>
         </div>
-    </div>
     </form>
     <!-- Conversor de unidades -->
-    <div class="container-conversor">
+    <div class="container-conversor" id="con-conversor">
         <form action="#">
             <label for="lang">Unidad de entrada:</label>
-            <select id="unit-ent" id="lang">
+            <select id="unit-ent">
               <option>Pixel</option>
-              <option>Porcentaje</option>
               <option>Rem</option>
+              <option>Porcentaje</option>
             </select>
         </form>
+        <form action="#">
+            <label for="lang">Unidad de salida:</label>
+            <select id="unit-out">
+              <option>Rem</option>
+              <option>Pixel</option>
+              <option>Porcentaje</option>
+            </select>
+        </form>
+        <button onclick="convertir()">Convertir</button>
     </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

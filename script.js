@@ -19,7 +19,7 @@ function same(){ //funcion de realizar operacion
         location.reload();
     } else {
         let resultado = eval(inputnum); //funcion que calcula los numeros ingresados en el input
-        document.getElementById('input-number').value=resultado; //remplaza la operacion por resultado    
+        document.getElementById('input-number').value=resultado; //remplaza la operacion por resultado   
     }
 }
 
@@ -86,11 +86,73 @@ function valid(event) {
       return true;
      }
      return false;
-       
+//Impide que se pegue codigo en el input
 }
+window.onload = function() {
+    let inpprincipal = document.getElementById('input-number');
+    inpprincipal.onpaste = function(e) {
+      e.preventDefault();
+      alert("esta acción está prohibida");
+    }
+    
+    myInput.oncopy = function(e) {
+      e.preventDefault();
+      alert("esta acción está prohibida");
+    }
+  }
 
 /*Conversor*/
+function ocultarymostrar(){   //funcion para mostrar y ocultar el contenedor del conversor
+    let contedorconversor = document.getElementById('con-conversor')
+    if (contedorconversor.style.display === "none") {
+        contedorconversor.style.display = "block"
+    } else {
+        contedorconversor.style.display = "none"
+    }
+}
+/*Funciones de convertir */
+function convertir(){
+    let unidadentrada = document.getElementById('unit-ent').value;
+    let unidadesalida = document.getElementById('unit-out').value;
+    let inputnum3 = parseInt(document.getElementById('input-number').value);
+    let result = 0;
 
-
-
+    if (unidadentrada === "Pixel" && (unidadesalida === "Rem")) { //de pixel a rem
+        result = inputnum3/16;
+        window.alert(inputnum3 + " pixel equivale a " + result.toFixed(2) + " Rem");
+        location.reload();
+    }else if (unidadentrada === "Rem" &&(unidadesalida === "Pixel")) { //de rem a pixel
+        result = inputnum3*16;
+        window.alert(inputnum3 + " Rem equivale a " + result+ " Pixel");
+        location.reload();
+    } else if(unidadentrada === "Pixel" &&(unidadesalida === "Porcentaje")){ //de pixel a porcentaje
+        result = inputnum3*6
+        window.alert(inputnum3 + " Pixel equivale a " + result.toFixed(2) + " %"); 
+        location.reload();
+    } else if(unidadentrada === "Porcentaje" &&(unidadesalida === "Pixel")){ //de porcentaje a pixel
+        result = inputnum3/6
+        window.alert(inputnum3 + " % equivale a " + result.toFixed(2) + " Pixel");
+        location.reload();
+    }else if(unidadentrada === "Rem" &&(unidadesalida === "Porcentaje")){ //de Rem a porcentaje
+        result = (inputnum3*16)*6;
+        window.alert(inputnum3 + " Rem equivale a " + result.toFixed(2) + " %");
+        location.reload(); 
+    }else if(unidadentrada === "Porcentaje" &&(unidadesalida === "Rem")){ //de Porcentaje a rem
+        result = (inputnum3/6)/16;
+        window.alert(inputnum3 + " % equivale a " + result.toFixed(2) + " Rem");
+        location.reload();    
+    } else if(unidadentrada === "Pixel" &&(unidadesalida === "Pixel")){ //de pixel a pixel
+        result = inputnum3;
+        window.alert(inputnum3 + " pixel equivale a " + result + " pixel");
+        location.reload();
+    }else if (unidadentrada ==="Rem" &&(unidadesalida === "Rem")) { //de rem a rem
+        result = inputnum3;
+        window.alert(inputnum3 + " Rem equivale a " + result + " Rem");
+        location.reload();
+    }else if (unidadentrada ==="Porcentaje" &&(unidadesalida === "Porcentaje")) { //de rem a rem
+        result = inputnum3;
+        window.alert(inputnum3 + " % equivale a " + result + " %");
+        location.reload();
+    }
+}
 

@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 /* Cuerpo de la calculadora */
 .body-calculator{
     width: 300px;
@@ -11,7 +19,6 @@
     padding: 5px;
     border-radius: 15px;
     background-color: #221d21;
-    border: black 1px solid;
 }
 /* input principal */
 .input-prn{
@@ -49,7 +56,7 @@
 .conversor-unit:hover{
     background-color: #b7aea5;
     font-weight: bold;
-    color: #221d21;  
+    color: #221d21;
 }
 /* botones de parentesis */
 .btnjerarquia{
@@ -123,7 +130,7 @@
 .body-number{
     width: 70%;
 }
-.body-number input{ 
+.body-number input{
     width: 25%;
     margin: 3%;
     padding: 15px;
@@ -156,7 +163,7 @@
     font-weight: lighter;
     color: #fff;
     border: transparent;
-    cursor: pointer;   
+    cursor: pointer;
 }
 .btn-n:hover{
     background-color: #b7aea5;
@@ -175,10 +182,46 @@
     font-weight: lighter;
     color: #fff;
     border: transparent;
-    cursor: pointer;      
+    cursor: pointer;
 }
 .btn-n-same:hover{
     background-color: #f77014;
     font-weight: bold;
+    color: #221d21;
+}
+/* contenedor de convertidos de unidades */
+#con-conversor{
+    width: 300px;
+    height: 110px;
+    display: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #433d3d;
+    color: #fff;
+}
+#con-conversor form{
+    margin: 2%;
+    text-align: center;
+}
+#con-conversor button{
+    background-color: #db6744;
+    padding: 6px;
+    width: 100%;
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+#con-conversor button:hover{
+    background-color: #f77014;
+    font-weight: bold;
     color: #221d21;   
+}
+select{
+    border-radius: 10px;
+    background-color: #221d21;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
 }
