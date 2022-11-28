@@ -1,6 +1,7 @@
-# Calculadora 
-######creada en javascript, html y ccs
-######Autor: Lesther Rey 
+# Calculadora
+
+###### creada en javascript, html y ccs
+###### Autor: Lesther Rey 
 
 
 ###### Introducción:
@@ -12,5 +13,5 @@ Convertidor de algunas unidades de css.
 boton de eliminar ultimo digito.
 responsive.
 
-######Finalidad:
+###### Finalidad:
 Practicar los conocimientos basicos de javascript, html y css.
